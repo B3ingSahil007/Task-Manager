@@ -102,6 +102,14 @@ const dashboard = {
       breadcrumbs: false
     },
     {
+      id: 'PaymentCollected',
+      title: 'Payment Collected',
+      type: 'item',
+      url: '/PaymentCollected',
+      icon: icons.BiCategory,
+      breadcrumbs: false
+    },
+    {
       id: 'Logout',
       title: 'Logout',
       type: 'item',

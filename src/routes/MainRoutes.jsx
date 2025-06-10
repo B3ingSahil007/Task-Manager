@@ -23,6 +23,7 @@ import UpdateTask from 'components/pages/UpdateTask';
 import ShowTaskDetails from 'components/pages/TaskDetails';
 import BillGenerate from 'components/pages/BillGenerate';
 import PaymentPending from 'components/pages/PaymentPending';
+import PaymentCollected from 'components/pages/PaymentCollected';
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/index')));
 
 // render - sample page
@@ -61,6 +62,10 @@ const MainRoutes = {
     {
       path: '/PaymentPending',
       element: <PaymentPending />
+    },
+    {
+      path: '/PaymentCollected',
+      element: <PaymentCollected />
     },
     {
       path: '/EditTask/:id',
