@@ -12,8 +12,18 @@ const BillGenerate = () => {
   const [totalPages, setTotalPages] = useState(1);
   const size = 10;
 
-  const handleBillGenerate = async (taskId) => {
-    console.log('Clicked');
+  const handleBillGenerate = async (taskId, currentStatus) => {
+    // Show confirmation dialog
+    const confirmMessage = currentStatus 
+      ? "Are you sure you want to mark this bill as not generated?"
+      : "Are you sure you want to generate the bill for this task?";
+    
+    const isConfirmed = window.confirm(confirmMessage);
+    
+    if (!isConfirmed) {
+      return; // Exit if user cancels
+    }
+
     const token = localStorage.getItem('token');
 
     try {
@@ -141,7 +151,7 @@ const BillGenerate = () => {
                     <td>
                       <Switch
                         checked={task.isBillGenerated}
-                        onChange={() => handleBillGenerate(task.taskId)}
+                        onChange={() => handleBillGenerate(task.taskId, task.isBillGenerated)}
                         color="primary"
                       />
                     </td>

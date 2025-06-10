@@ -11,7 +11,14 @@ const PaymentPending = () => {
   const [size] = useState(10);
   const [totalPages, setTotalPages] = useState(1);
 
-  const handleBillGenerate = async (taskId) => {
+  const handleBillGenerate = async (taskId, taskName) => {
+    // Add confirmation dialog
+    const isConfirmed = window.confirm(`Are you sure you want to mark payment as collected for task "${taskName}"?`);
+    
+    if (!isConfirmed) {
+      return; // Exit if user cancels
+    }
+
     const token = localStorage.getItem('token');
 
     try {
@@ -124,7 +131,7 @@ const PaymentPending = () => {
                     <td>
                       <Switch
                         checked={task.paymentStatus !== 'PENDING'}
-                        onChange={() => handleBillGenerate(task.taskId)}
+                        onChange={() => handleBillGenerate(task.taskId, task.name)}
                         color="primary"
                       />
                     </td>
