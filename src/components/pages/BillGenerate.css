@@ -1,0 +1,105 @@
+.bill-container {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .bill-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .custom-table thead {
+    background-color: #f0f0f0;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .custom-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .custom-table th {
+    font-weight: 600;
+  }
+  .bill-container {
+    padding: 20px;
+  }
+  
+  .bill-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .custom-table th {
+    background-color: #f3f3f3;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
